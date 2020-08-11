@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ahem - Detect Covid-19</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ishwar Kumar S">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="../static/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form id="wizard" action="{{ url_for('main') }}" method="POST" enctype=multipart/form-data>
+        		<!-- SECTION 1 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="../static/images/form-wizard-1.jpg" alt="">
+						</div>
+						<div class="form-content" >
+							<div class="form-header">
+								<h3>AHEM - Detect Covid just by a Cough!</h3>
+							</div>
+							<p>Please fill with your details</p>
+							<div class="form-row">
+								<div class="form-holder">
+									<input type="number" name = "age" placeholder="Age" class="form-control" min="0" oninput="validity.valid||(value='');" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-holder">
+									Gender:
+								</div>
+								<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="radio" name="gender" value="0" checked> Male<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="female">
+											<input type="radio" name="gender" value="1"> Female<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-holder">
+									<br>Are you a regular smoker?
+								</div>
+								<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="radio" name="smoker" value="1" checked> No<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="female">
+											<input type="radio" name="smoker" value="0"> Yes<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+                </section>
+
+				<!-- SECTION 2 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="../static/images/form-wizard-2.jpg" alt="">
+						</div>
+						<div class="form-content">
+							<div class="form-header">
+								<h3>AHEM</h3>
+							</div>
+							<p>Select Symptoms that you experience currently</p>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Body aches">Body aches<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Cough (wet with mucus)">Cough (wet, with mucus)<br>
+											<span class="checkmark"></span>
+										</label>
+
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Cough (dry)">Cough (dry)<br>
+											<span class="checkmark"></span>
+										</label>
+
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Fever-chills or sweating">Fever, chills or sweating<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Headaches">Headaches<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Tightness in chest">Tightness in chest<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Loss of smell">Loss of smell<br>
+											<span class="checkmark"></span>
+										</label>
+
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="New or worsening cough">New or worsening cough<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Sore throat">Sore throat<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Shortness of breath">Shortness of breath<br>
+											<span class="checkmark"></span>
+										</label>
+
+
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											 <input type="checkbox" name="reported_symptoms" value="Loss of taste">Loss of taste<br>
+											<span class="checkmark"></span>
+										</label>
+
+
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="Vomiting and diarrhoea">Vomiting and diarrhoea<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="checkbox" name="reported_symptoms" value="none">None<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+
+						</div>
+					</div>
+                </section>
+
+                <!-- SECTION 3 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="../static/images/form-wizard-3.jpg" alt="">
+						</div>
+						<div class="form-content">
+							<div class="form-header">
+								<h3>AHEM</h3>
+							</div>
+							<p>Upload Cough Audio</p>
+							<div class="form-row">
+								<div class="form-holder w-100">
+									<label class="custom-file-upload">
+										<input type="file" accept="audio/*" capture id="recorder" name = "file">
+											Upload Cough File Here
+									</label>
+									<br><br><br>
+									<audio id="player" controls></audio><br>
+									<script>
+									  var recorder = document.getElementById('recorder');
+									  var player = document.getElementById('player');
+
+									  recorder.addEventListener('change', function(e) {
+										const file = e.target.files[0];
+										const url = URL.createObjectURL(file);
+										player.src = url;
+									  });
+									</script>
+									<br>
+									<label class="custom-file-upload">
+										<input type="submit">
+										<h2>Detect Covid</h2>
+									</label>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+                </section>
+            </form>
+		</div>
+		<!-- JQUERY -->
+		<script src="../static/js/jquery-3.3.1.min.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="../static/js/jquery.steps.js"></script>
+		<script src="../static/js/main.js"></script>
+</body>
+</html>

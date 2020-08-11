@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ahem - Detect Covid-19</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ishwar Kumar S">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="../static/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form action="{{ url_for('home') }}" method="POST" enctype=multipart/form-data>
+        		<div class="result" align="center">
+					{% if result %}
+						<br>
+						<p>{{ result }}</p>
+					{% endif %}
+					<br><br><br>
+					<label class="male">
+						Please stay at home for 7 days if you have any of the Covid-19 symptoms.<br>
+						If you live with other people, they should stay at home for 14 days from the day the first person got symptoms.<br>
+						<br>
+						Go to a hospital only if:<br>
+						-you feel you cannot cope with your symptoms at home<br>
+						-your condition gets worse<br>
+						-your symptoms do not get better after 7 days<br><br><br>
+
+					</label>
+					<label class="custom-file-upload">
+						<input type="submit">
+							Return to Home Page
+					</label>
+
+				</div>
+            </form>
+		</div>
+
+			<div class="footer">
+			  <p>AHEM - Machine Learning Model Prototype Developed by Ishwar Kumar S (ishwarr18@gmail.com), Techbee, HCL Technologies Ltd.</p>
+			</div>
+		<!-- JQUERY -->
+		<script src="../static/js/jquery-3.3.1.min.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="../static/js/jquery.steps.js"></script>
+		<script src="../static/js/main.js"></script>
+</body>
+</html>
